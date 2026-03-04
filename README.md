@@ -1,5 +1,5 @@
 # threat-intelligence-investigation
-SOC style threat intelligence investigation portfolio 
+
 Investigation Date: March 3, 2026
 # Threat Intelligence Investigation
 
