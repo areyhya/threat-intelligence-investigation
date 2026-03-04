@@ -7,14 +7,25 @@ Investigation Date: March 3, 2026
 This project documents a threat intelligence investigation to analyze a suspicious domain and identify potential indicators of compromise (IOCs).
 
 This investigation is conducted for educational purposes using publicly available
-threat intelligence tools. No interaction with malicious infrastructure was performed.
+threat intelligence tools. No interaction with malicious infrastructure was ## Investigation Workflow
 
-## Investigation Workflow
 ```mermaid
 flowchart TD
-### VirusTotal Analysis
+A[Indicator Identified] --> B[Reputation Check]
+B --> C[VirusTotal Analysis]
+B --> D[AbuseIPDB Check]
+B --> E[WHOIS Lookup]
+C --> F[Correlation of Findings]
+D --> F
+E --> F
+F --> G[DNS Analysis]
+G --> H[Identify IOCs]
+H --> I[Analyst Assessment]
+I --> J[Recommended Mitigation]
+```
 
-Indicator: example.com  
+### VirusTotal Analysis
+(Indicator: example.com  
 Analysis Date: March 2026  
 
 Key Findings:
@@ -24,7 +35,10 @@ Key Findings:
 
 Assessment:
 The domain example.com does not show any malicious indicators on VirusTotal. 
-No security vendors currently flag the domain as suspicious or malicious.
+No security vendors currently flag the domain as suspicious or malicious.)
+
+
+
 ### WHOIS Analysis
 
 Registrar: Internet Assigned Numbers Authority (IANA)  
